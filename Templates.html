@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates & Examples</title>
+    <link rel="stylesheet" href="/css-scripts/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark-dimmed.min.css">
+
+    <script>
+    $(function(){
+        $("#navbar").load("/headerNav/headerNav.html")
+    }) 
+    </script>
+ 
+</head>
+<body onload="checkDarkMode()"> 
+    <div id="navbar"></div>
+    
+<div class="large-space"></div>
+
+<div id="codeExample">
+<pre>
+<code>body{
+  background: gray;
+  font-size: 14px;
+  font-family: "JetBrains Mono";
+}
+</code></pre>
+</div>
+
+<div id="codeExample" style="padding-right: 20px;">
+<pre class="window">
+<code>function showAndHide() {
+    var x = document.querySelector(".your class name");
+    
+    if (x.style.display == "none"){
+       x.style.display = "block";
+    } else {
+       x.style.display = "none";
+    }
+}
+</code></pre>
+</div>
+
+</li>
+
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>-->
+<script src="/js-scripts/darkmode.js"></script>
+<script src="js-scripts/syntaxHighlight.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

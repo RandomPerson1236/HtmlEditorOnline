@@ -1,0 +1,180 @@
+.mainEditor {
+    background: rgb(22, 22, 22);
+    display: flex;
+    width: 80%;
+    transform: translate(12%, 6%);
+    padding: 1rem;
+    box-shadow:0 2px 3px black;
+    position:fixed;
+    height:80vh;
+     justify-content: center;
+      align-items: center;
+    border: 7px solid rgb(14, 14, 14);
+  }
+  .editor {
+    counter-reset: line;
+    background-color: rgb(36, 36, 36);
+    width: 50%;
+    color: white;
+    overflow: auto;
+    resize: horizontal;
+    font-family: 'JetBrains Mono';
+    box-shadow: inset 0 0 10px rgb(17, 17, 17);
+    white-space: pre;
+    font-size: 20px;
+    outline: none;
+    border-radius: 5px;
+    border-left: 10px solid #181818;
+    padding: 0.4rem;
+    text-align: left;
+    /*border: 4px solid #111111;*/
+    height: 80vh;
+  }
+  .editor .lineNum{
+      display: block;
+      line-height: 1.5rem;
+  }
+  .editor .lineNum:before{
+      counter-increment: line;
+      content: counter(line) ".";
+      display: inline-block; 
+      color: rgba(255, 255, 255, 0.158);
+      font-family: 'Courier New', Courier, monospace;
+      margin-right: .5rem;
+  }
+  .css-editor {
+    counter-reset: line;
+    background-color: rgb(36, 36, 36);
+    width: 50%;
+    overflow: auto;
+    resize: horizontal;
+    color: rgb(174, 179, 206);
+    font-size: 20px;
+    white-space: pre;
+    box-shadow: inset 0 0 10px #000;
+    font-family: 'JetBrains Mono';
+    outline: none;
+    border-radius: 5px;
+    border-left: 10px solid #181818;
+    padding: 0.4rem;
+    text-align: left;
+    /*border: 4px solid #111111;*/
+    height: 80vh;
+  }
+  .css-editor .lineNumCss{
+    display: block;
+    line-height: 1.5rem;
+  }
+  .css-editor .lineNumCss:before{
+    counter-increment: line;
+    content: counter(line) ".";
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.158);
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: .5rem;
+}
+.js-editor {
+    counter-reset: line;
+    background-color: rgb(36, 36, 36);
+    width: 50%;
+    overflow: auto;
+    resize: horizontal;
+    font-size: 20px;
+    color: rgb(233, 229, 183);
+    white-space: pre;
+    box-shadow: inset 0 0 10px #000;
+    font-family: 'JetBrains Mono';
+    outline: none;
+    border-radius: 5px;
+    border-left: 10px solid #181818;
+    padding: 0.4rem;
+    text-align: left;
+    /*border: 4px solid #111111;*/
+    height: 80vh;
+  }
+  .js-editor .lineNumJs{
+    display: block;
+    line-height: 1.5rem;
+  }
+  .js-editor .lineNumJs:before{
+    counter-increment: line;
+    content: counter(line) ".";
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.158);
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: .5rem;
+}
+  .ui-resizable-helper{
+  border: 2px dotted gray;
+  }
+  .compiler {
+    background-color: rgb(216, 216, 216);
+    width: 50%;
+    overflow: auto;
+    white-space: pre;
+    resize: horizontal;
+    right: 0;
+    box-shadow: 0 1px 1px rgb(22, 22, 22);
+    border: solid 5px #2c3131;
+    border-radius: 5px;
+    height: 80vh;
+  }
+  #settingsConsole{
+      border: solid 5px #141414;
+      background-color: #1a1a1a;
+      padding-top: 100px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.356);
+      margin-right: 10px;
+      padding-bottom: 100px;
+  }
+  #colorPickerConsole{
+    background: none;
+    border: solid 1px gray;
+  }
+  #runCode{
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: 0 2px rgb(70, 76, 80);
+      font-size: 25px;
+      color: white;
+      transition: 0.05s;
+      margin: 4px;
+      background: #292929;
+      border: 1px solid rgb(19, 19, 19);
+      border-radius: 5px;
+      z-index: auto;
+      vertical-align: middle;
+  }
+  #runCode:hover{
+    font-size: 28px;
+    transition: 0.05s;
+    box-shadow: 0 4px rgb(70, 76, 80);
+    z-index: 20;
+    cursor: pointer;
+  }
+  #runCode:active{
+    transform: translateY(4px);
+    box-shadow: 0 1px rgb(70, 76, 80);
+  }
+  #runCode span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+  }
+  #runCode span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.2s;
+  }
+  #runCode:hover span {
+    padding-right: 20px;
+  }
+  
+  #runCode:hover span:after {
+    opacity: 1;
+    right: 0;
+  }

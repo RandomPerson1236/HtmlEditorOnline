@@ -1,0 +1,156 @@
+:root{
+--dark-background-color: #111111;
+--dark-background-color-alt: #222222;
+
+--dark-text-color: #ffffff;
+--dark-link-color: orange;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+--background-color: #ffffff;
+--background-color-alt: #eeeeee;
+
+--text-color: #000000;
+--link-color: green;
+
+background-color: var(--background-color);
+color: var(--text-color);
+}
+body.theme-dark{
+--background-color: var(--dark-background-color);
+--background-color-alt: var(--dark-background-color-alt);
+
+--text-color: var(--dark-text-color);
+--link-color: var(--dark-link-color);
+}
+@media (prefers-color-scheme: dark){
+    body.theme-auto{
+    --background-color: var(--dark-background-color);
+    --background-color-alt: var(--dark-background-color-alt);
+
+    --text-color: var(--dark-text-color);
+    }
+}
+li{
+    list-style-type: none;
+}
+p{
+    font-family: 'JetBrains Mono';
+}
+a{
+    color: var(--text-color);
+    font-size: 20px;
+}
+a:hover{
+color: var(--link-color);
+}
+.select_input option{
+    color: #000000;
+}
+.select_input{
+    -webkit-appearance: none;
+    padding: 7px 14px;
+    background: none;
+    border: 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+#menuNavButton{
+    color: var(--text-color);
+    background: none;
+}
+#menuNavButton:hover{
+    font-size: 50px;
+    color: var(--link-color);
+}
+.code-elem{
+    color: rgb(161, 60, 60);
+}
+.code-function{
+    color: rgb(211, 95, 211);
+}
+.code-comment{
+    color: rgba(255, 255, 255, 0.2);
+}
+.code-str{
+    color: orange;
+}
+.code-var{
+    color: rgb(62, 167, 216);
+}
+.code-getelement{
+    color: rgb(202, 140, 68);
+}
+.code-css-blue{
+    color: rgb(140, 200, 240);
+}
+#codeExample{
+  border-left: 5px solid #252525;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 10px;
+  width: 35%;
+  /*box-shadow: inset 0 0 10px black;*/
+  background: #222222;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#codeExample code{
+  font-family: 'JetBrains Mono';
+  color: white;
+}
+#webTheme{
+    font-size: 20px;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.151);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(39, 39, 39);
+    border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(56, 56, 56);
+}
+::-webkit-scrollbar-corner{
+    background: rgb(37, 37, 37);
+}
+.window .lineNum{
+  display: block;
+  line-height: 1.5rem;
+  }
+  .window .lineNum:before{
+  counter-increment: line;
+  color: rgba(255, 255, 255, 0.1);
+  content: counter(line) "│";
+  display: inline-block;
+  margin-right: 0.5rem;
+  }
+  .window{
+  counter-reset: line;
+  }
+  .menuNav{
+      border: solid 2px black;
+      height: 20px;
+      width: 20%;
+      font-size: 20px;
+      text-align: center;
+      margin: auto;
+      padding-top: 10px; padding-bottom: 20px;
+  }
+  .vertical-menu button{
+      margin: 1px;
+      font-size: 45px;
+      float: left;
+      border: 0;
+  }
+  .large-space{
+      padding: 40px;
+  }
