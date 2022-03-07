@@ -1,0 +1,50 @@
+button{
+    z-index: 95;
+    font-size: 20px;
+}
+li{
+    position: absolute;
+    top: 5%;
+    left: 1%;
+    margin: 0;
+}
+.editor{
+    background: rgb(49, 51, 59);
+    width: 15%;
+    height: 20%;
+    position: absolute;
+    text-align: center;
+    top: 2%;
+    left: 2%;
+    border-radius: 10%;
+    border: 5px solid rgb(63, 96, 134);
+    padding-top: 10px;
+    box-shadow: 0 0 5px inset black;
+}
+.editor button{
+    border-radius: 2px;
+    margin: 5px;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 2px 5px black;
+    background-color: rgb(59, 63, 78);
+    border: 2px solid rgb(63, 96, 134);
+    color: white;
+}
+.editor #fovText{
+    outline: none;
+    padding: 10px;
+    background-color: rgb(49, 52, 63);
+    border: 0px;
+    border-left: 5px solid rgb(63, 96, 134);
+    color: white;
+    z-index: auto;
+    box-shadow: 0 0 5px inset black;
+}
+.editor #fovText:focus{
+    border: 2px solid white; 
+    z-index: 99;
+    box-shadow: 0 0 6px white, 0 0 15px rgb(63, 96, 134);
+    transition: 0.10s;
+}
+.editor button:hover{background-color: rgb(49, 52, 63);}
